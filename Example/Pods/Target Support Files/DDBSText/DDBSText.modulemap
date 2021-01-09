@@ -1,0 +1,6 @@
+framework module DDBSText {
+  umbrella header "DDBSText-umbrella.h"
+
+  export *
+  module * { export * }
+}

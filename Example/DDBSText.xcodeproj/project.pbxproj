@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		099276E85C509E3116703373 /* Pods-DDBSText_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDBSText_Tests.release.xcconfig"; path = "Target Support Files/Pods-DDBSText_Tests/Pods-DDBSText_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		0FF955DD4BEACB9AE3F45DB0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0FF955DD4BEACB9AE3F45DB0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		254C9BE303ED570FB0A9E48D /* Pods-DDBSText_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDBSText_Example.release.xcconfig"; path = "Target Support Files/Pods-DDBSText_Example/Pods-DDBSText_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3BF367F2E6A4AA1EFA789393 /* Pods_DDBSText_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDBSText_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* DDBSText_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDBSText_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,9 +43,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6AE63CBB274489848E98BBF3 /* Pods-DDBSText_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDBSText_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DDBSText_Tests/Pods-DDBSText_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6E05610FA55C34664FE657C8 /* DDBSText.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = DDBSText.podspec; path = ../DDBSText.podspec; sourceTree = "<group>"; };
+		6E05610FA55C34664FE657C8 /* DDBSText.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DDBSText.podspec; path = ../DDBSText.podspec; sourceTree = "<group>"; };
 		7216C8F2C00F916F0AABDEFB /* Pods-DDBSText_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDBSText_Example.debug.xcconfig"; path = "Target Support Files/Pods-DDBSText_Example/Pods-DDBSText_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B65D92E274C76CC7980F24A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B65D92E274C76CC7980F24A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D6C564540956BA543A210A0D /* Pods_DDBSText_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDBSText_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,6 @@
 				6AE63CBB274489848E98BBF3 /* Pods-DDBSText_Tests.debug.xcconfig */,
 				099276E85C509E3116703373 /* Pods-DDBSText_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,6 +213,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -227,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,10 +293,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DDBSText_Example/Pods-DDBSText_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DDBSText/DDBSText.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DDBSText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,11 +481,15 @@
 			baseConfigurationReference = 7216C8F2C00F916F0AABDEFB /* Pods-DDBSText_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DDBSText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -493,11 +500,15 @@
 			baseConfigurationReference = 254C9BE303ED570FB0A9E48D /* Pods-DDBSText_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DDBSText/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

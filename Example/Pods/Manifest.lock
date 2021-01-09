@@ -1,0 +1,25 @@
+PODS:
+  - DDBSText (0.1.0):
+    - YYImage
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+
+DEPENDENCIES:
+  - DDBSText (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - YYImage
+
+EXTERNAL SOURCES:
+  DDBSText:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DDBSText: 682e5f515b35cac7bfbc8d5e86f88125397ddc08
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+
+PODFILE CHECKSUM: 850dc3684039ba3cd4174eeacafa7221d8e1843d
+
+COCOAPODS: 1.10.0

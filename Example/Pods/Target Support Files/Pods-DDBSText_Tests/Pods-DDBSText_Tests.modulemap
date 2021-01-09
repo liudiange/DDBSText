@@ -1,0 +1,6 @@
+framework module Pods_DDBSText_Tests {
+  umbrella header "Pods-DDBSText_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
